@@ -1,0 +1,38 @@
+.example {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 25svh;
+  z-index: inherit;
+}
+.example::before {
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  background-color: hsla(0, 50%, 50%, 0.5);
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%) skew(0, -10deg);
+  content: "";
+}
+.example__button {
+  position: absolute;
+  right: 1rem;
+  top: -2rem;
+  border-radius: 0.5rem;
+  background-color: hsla(0, 50%, 50%, 0.5);
+  padding: 0.25rem 0.75rem;
+  transition: 0.2s;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+.example__button:hover {
+  opacity: 0.5;
+}
+.example-list {
+  display: grid;
+  gap: 1rem;
+}
+.example-list__item {
+}
